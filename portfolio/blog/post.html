@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="doc-title">Post | Your Name</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/theme.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo">YourName</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a class="active" href="/blog/index.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <article class="section reveal">
+      <div class="container narrow">
+        <p class="eyebrow"><a href="/blog/index.html">← Back to Blog</a></p>
+        <h1 id="post-title">Loading...</h1>
+        <p class="muted" id="post-meta"></p>
+        <div class="prose" id="post-content">Loading content…</div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    async function loadPost() {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+      if (!slug) {
+        document.getElementById('post-title').textContent = 'Post not found';
+        document.getElementById('post-content').textContent = 'Missing slug parameter.';
+        return;
+      }
+      try {
+        const indexResp = await fetch('/data/blog/index.json');
+        const index = await indexResp.json();
+        const post = index.posts.find(p => p.slug === slug);
+        if (!post) throw new Error('Post not found');
+        document.getElementById('post-title').textContent = post.title;
+        document.getElementById('doc-title').textContent = post.title + ' | Your Name';
+        document.getElementById('post-meta').textContent = `${post.date} • ${post.tags.join(', ')}`;
+        const mdResp = await fetch(`/content/blog/${post.slug}.md`);
+        const markdown = await mdResp.text();
+        const html = marked.parse(markdown);
+        document.getElementById('post-content').innerHTML = html;
+      } catch (err) {
+        document.getElementById('post-title').textContent = 'Error loading post';
+        document.getElementById('post-content').textContent = 'Please try again later.';
+        console.error(err);
+      }
+    }
+    loadPost();
+  </script>
+</body>
+</html>

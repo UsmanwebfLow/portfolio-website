@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Your Name</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/theme.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo">YourName</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a class="active" href="/about.html">About</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal">
+      <div class="container narrow">
+        <h1>About Me</h1>
+        <p>
+          I'm a frontend developer passionate about crafting accessible, performant, and beautiful web experiences. I enjoy building reusable components, design systems, and data-driven UIs.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="pill-list">
+          <li>HTML5</li>
+          <li>CSS3 / Sass</li>
+          <li>JavaScript (ES2023)</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>REST / GraphQL</li>
+          <li>Testing</li>
+          <li>Accessibility</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2>Journey</h2>
+        <ol class="timeline">
+          <li>
+            <div class="time">2025</div>
+            <div class="event">
+              <h3>Frontend Engineer at Company</h3>
+              <p>Building delightful product experiences at scale.</p>
+            </div>
+          </li>
+          <li>
+            <div class="time">2023</div>
+            <div class="event">
+              <h3>Open Source Contributor</h3>
+              <p>Maintained UI components and documentation.</p>
+            </div>
+          </li>
+          <li>
+            <div class="time">2021</div>
+            <div class="event">
+              <h3>Started Web Development Journey</h3>
+              <p>Fell in love with the web platform.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Preview</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1e293b;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .preview-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .preview-card h3 {
+            color: #6366f1;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .preview-card p {
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+        }
+        .feature-list li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .demo-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .demo-link:hover {
+            transform: translateY(-2px);
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .tech-tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid #e2e8f0;
+        }
+        .hero-preview {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-preview h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .hero-preview p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Portfolio + Blog Website Preview</h1>
+        
+        <div class="hero-preview">
+            <h2>Modern Portfolio & Blog Website</h2>
+            <p>A sleek, responsive website showcasing your work, skills, and thoughts</p>
+        </div>
+
+        <div class="preview-grid">
+            <div class="preview-card">
+                <h3>🏠 Home Section</h3>
+                <p>Eye-catching hero section with animated elements and call-to-action buttons.</p>
+                <ul class="feature-list">
+                    <li>Animated profile card with floating effect</li>
+                    <li>Gradient text highlights</li>
+                    <li>Smooth scroll indicator</li>
+                    <li>Responsive design for all devices</li>
+                </ul>
+            </div>
+
+            <div class="preview-card">
+                <h3>👤 About Section</h3>
+                <p>Personal bio, skills showcase, and interactive career timeline.</p>
+                <ul class="feature-list">
+                    <li>Skills organized by category</li>
+                    <li>Interactive skill tags</li>
+                    <li>Alternating timeline layout</li>
+                    <li>Professional career progression</li>
+                </ul>
+            </div>
+
+            <div class="preview-card">
+                <h3>💼 Projects Gallery</h3>
+                <p>Showcase your work with technology tags and live links.</p>
+                <ul class="feature-list">
+                    <li>6 sample projects included</li>
+                    <li>Technology stack tags</li>
+                    <li>Live demo and code links</li>
+                    <li>Hover animations</li>
+                </ul>
+            </div>
+
+            <div class="preview-card">
+                <h3>📝 Blog System</h3>
+                <p>Full-featured blog with search, pagination, and rich content.</p>
+                <ul class="feature-list">
+                    <li>Search functionality (Ctrl/Cmd+K)</li>
+                    <li>Pagination system</li>
+                    <li>Modal blog reader</li>
+                    <li>5 sample blog posts</li>
+                </ul>
+            </div>
+
+            <div class="preview-card">
+                <h3>🎨 Theme System</h3>
+                <p>Dark/light theme toggle with persistent storage.</p>
+                <ul class="feature-list">
+                    <li>CSS Custom Properties</li>
+                    <li>Local storage persistence</li>
+                    <li>Smooth theme transitions</li>
+                    <li>Theme-aware components</li>
+                </ul>
+            </div>
+
+            <div class="preview-card">
+                <h3>📱 Responsive Design</h3>
+                <p>Mobile-first approach with touch-friendly interactions.</p>
+                <ul class="feature-list">
+                    <li>Hamburger navigation</li>
+                    <li>Responsive grid layouts</li>
+                    <li>Touch-friendly buttons</li>
+                    <li>Optimized for all screen sizes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <h3>🚀 Technical Features</h3>
+            <div class="tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript ES6+</span>
+                <span class="tech-tag">CSS Grid</span>
+                <span class="tech-tag">Flexbox</span>
+                <span class="tech-tag">CSS Custom Properties</span>
+                <span class="tech-tag">Service Worker</span>
+                <span class="tech-tag">PWA Ready</span>
+                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">Dark/Light Theme</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="http://localhost:8000" class="demo-link" target="_blank">
+                🚀 View Live Demo
+            </a>
+        </div>
+
+        <div class="preview-card" style="margin-top: 2rem;">
+            <h3>📋 Sample Content Included</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <h4>Sample Projects:</h4>
+                    <ul class="feature-list">
+                        <li>E-Commerce Platform</li>
+                        <li>Task Management App</li>
+                        <li>Weather Dashboard</li>
+                        <li>Portfolio Website</li>
+                        <li>Social Media Dashboard</li>
+                        <li>Recipe Finder App</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Sample Blog Posts:</h4>
+                    <ul class="feature-list">
+                        <li>Getting Started with Modern JavaScript</li>
+                        <li>Building Responsive Web Design</li>
+                        <li>Introduction to React Hooks</li>
+                        <li>CSS Grid Layout Mastery</li>
+                        <li>JavaScript Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

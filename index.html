@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio & Blog</title>
+    <meta name="description" content="Personal portfolio and blog showcasing web development projects and insights">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <span class="nav__logo-name">YourName</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Home Section -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Hi, I'm <span class="home__title-color">Your Name</span>
+                    </h1>
+                    <h3 class="home__subtitle">Full Stack Developer</h3>
+                    <p class="home__description">
+                        I create amazing web experiences with modern technologies. 
+                        Passionate about clean code, user experience, and continuous learning.
+                    </p>
+                    
+                    <div class="home__buttons">
+                        <a href="#contact" class="button button--primary">
+                            Get In Touch
+                        </a>
+                        <a href="#projects" class="button button--secondary">
+                            See My Work
+                        </a>
+                    </div>
+                    
+                    <div class="home__social">
+                        <a href="https://github.com" class="home__social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="home__social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" class="home__social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="home__img">
+                    <div class="home__blob">
+                        <img src="assets/profile.jpg" alt="Your Name" class="home__blob-img">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-button">
+                    <i class="fas fa-mouse"></i>
+                    <span class="home__scroll-name">Scroll down</span>
+                    <i class="fas fa-arrow-down home__scroll-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
+            
+            <div class="about__container container grid">
+                <div class="about__img">
+                    <img src="assets/about.jpg" alt="About me" class="about__img-item">
+                </div>
+                
+                <div class="about__data">
+                    <p class="about__description">
+                        I'm a passionate full-stack developer with experience in modern web technologies. 
+                        I love creating digital solutions that solve real-world problems and provide 
+                        exceptional user experiences. When I'm not coding, you can find me exploring 
+                        new technologies, contributing to open source, or sharing knowledge through my blog.
+                    </p>
+                    
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">08+</span>
+                            <span class="about__info-name">Years<br>experience</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">20+</span>
+                            <span class="about__info-name">Completed<br>projects</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">05+</span>
+                            <span class="about__info-name">Companies<br>worked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about__buttons">
+                        <a download="" href="assets/resume.pdf" class="button button--primary">
+                            Download CV <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My technical level</span>
+            
+            <div class="skills__container container grid">
+                <div>
+                    <!-- Frontend Skills -->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="fas fa-laptop-code skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Frontend Developer</h1>
+                                <span class="skills__subtitle">More than 4 years</span>
+                            </div>
+                            <i class="fas fa-angle-down skills__arrow"></i>
+                        </div>
+                        
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__html"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__css"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__js"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__number">75%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__react"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Skills -->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="fas fa-server skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Backend Developer</h1>
+                                <span class="skills__subtitle">More than 2 years</span>
+                            </div>
+                            <i class="fas fa-angle-down skills__arrow"></i>
+                        </div>
+                        
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">PHP</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__php"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Node.js</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__node"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Firebase</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__firebase"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__number">55%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__python"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <!-- Qualification/Timeline -->
+                    <div class="qualification section">
+                        <h2 class="section__title">Qualification</h2>
+                        <span class="section__subtitle">My personal journey</span>
+                        
+                        <div class="qualification__container container">
+                            <div class="qualification__tabs">
+                                <div class="qualification__button button--flex qualification__active" data-target="#education">
+                                    <i class="fas fa-graduation-cap qualification__icon"></i>
+                                    Education
+                                </div>
+                                
+                                <div class="qualification__button button--flex" data-target="#work">
+                                    <i class="fas fa-briefcase qualification__icon"></i>
+                                    Work
+                                </div>
+                            </div>
+                            
+                            <div class="qualification__sections">
+                                <!-- Education -->
+                                <div class="qualification__content qualification__active" data-content id="education">
+                                    <div class="qualification__data">
+                                        <div>
+                                            <h3 class="qualification__title">Computer Engineering</h3>
+                                            <span class="qualification__subtitle">Spain - University</span>
+                                            <div class="qualification__calendar">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2018 - 2020
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <span class="qualification__rounder"></span>
+                                            <span class="qualification__line"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="qualification__data">
+                                        <div></div>
+                                        
+                                        <div>
+                                            <span class="qualification__rounder"></span>
+                                            <span class="qualification__line"></span>
+                                        </div>
+                                        
+                                        <div>
+                                            <h3 class="qualification__title">Web Design</h3>
+                                            <span class="qualification__subtitle">Spain - Institute</span>
+                                            <div class="qualification__calendar">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2020 - 2021
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="qualification__data">
+                                        <div>
+                                            <h3 class="qualification__title">Web Development</h3>
+                                            <span class="qualification__subtitle">Spain - Institute</span>
+                                            <div class="qualification__calendar">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2021 - 2022
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <span class="qualification__rounder"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Work -->
+                                <div class="qualification__content" data-content id="work">
+                                    <div class="qualification__data">
+                                        <div>
+                                            <h3 class="qualification__title">Software Engineer</h3>
+                                            <span class="qualification__subtitle">Microsoft - USA</span>
+                                            <div class="qualification__calendar">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2021 - Present
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <span class="qualification__rounder"></span>
+                                            <span class="qualification__line"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="qualification__data">
+                                        <div></div>
+                                        
+                                        <div>
+                                            <span class="qualification__rounder"></span>
+                                            <span class="qualification__line"></span>
+                                        </div>
+                                        
+                                        <div>
+                                            <h3 class="qualification__title">Frontend Developer</h3>
+                                            <span class="qualification__subtitle">Apple Inc - USA</span>
+                                            <div class="qualification__calendar">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2020 - 2021
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="qualification__data">
+                                        <div>
+                                            <h3 class="qualification__title">Web Designer</h3>
+                                            <span class="qualification__subtitle">Figma - Spain</span>
+                                            <div class="qualification__calendar">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                2018 - 2020
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <span class="qualification__rounder"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="portfolio section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Most recent work</span>
+            
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Project 1 -->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/portfolio1.jpg" alt="E-commerce Platform" class="portfolio__img">
+                        
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">E-commerce Platform</h3>
+                            <p class="portfolio__description">
+                                Modern e-commerce platform built with React, Node.js, and MongoDB. 
+                                Features include user authentication, payment integration, and admin dashboard.
+                            </p>
+                            <div class="portfolio__tags">
+                                <span class="portfolio__tag">React</span>
+                                <span class="portfolio__tag">Node.js</span>
+                                <span class="portfolio__tag">MongoDB</span>
+                            </div>
+                            <div class="portfolio__buttons">
+                                <a href="#" class="button button--primary button--small portfolio__button">
+                                    Demo <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="#" class="button button--secondary button--small portfolio__button">
+                                    Code <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/portfolio2.jpg" alt="Task Management App" class="portfolio__img">
+                        
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Task Management App</h3>
+                            <p class="portfolio__description">
+                                Collaborative task management application with real-time updates, 
+                                team collaboration features, and comprehensive project tracking.
+                            </p>
+                            <div class="portfolio__tags">
+                                <span class="portfolio__tag">Vue.js</span>
+                                <span class="portfolio__tag">Firebase</span>
+                                <span class="portfolio__tag">Socket.io</span>
+                            </div>
+                            <div class="portfolio__buttons">
+                                <a href="#" class="button button--primary button--small portfolio__button">
+                                    Demo <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="#" class="button button--secondary button--small portfolio__button">
+                                    Code <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/portfolio3.jpg" alt="Weather Dashboard" class="portfolio__img">
+                        
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Weather Dashboard</h3>
+                            <p class="portfolio__description">
+                                Interactive weather dashboard with location-based forecasts, 
+                                historical data visualization, and weather alerts.
+                            </p>
+                            <div class="portfolio__tags">
+                                <span class="portfolio__tag">JavaScript</span>
+                                <span class="portfolio__tag">Chart.js</span>
+                                <span class="portfolio__tag">API</span>
+                            </div>
+                            <div class="portfolio__buttons">
+                                <a href="#" class="button button--primary button--small portfolio__button">
+                                    Demo <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="#" class="button button--secondary button--small portfolio__button">
+                                    Code <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add Pagination -->
+                <div class="swiper-button-next">
+                    <i class="fas fa-angle-right portfolio__icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fas fa-angle-left portfolio__icon"></i>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog section" id="blog">
+            <h2 class="section__title">Blog</h2>
+            <span class="section__subtitle">Latest articles</span>
+            
+            <div class="blog__container container grid">
+                <!-- Blog Search -->
+                <div class="blog__search">
+                    <div class="blog__search-box">
+                        <input type="text" id="blog-search" placeholder="Search articles..." class="blog__search-input">
+                        <i class="fas fa-search blog__search-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- Blog Posts -->
+                <div class="blog__posts grid" id="blog-posts">
+                    <!-- Blog Post 1 -->
+                    <article class="blog__post">
+                        <img src="assets/blog1.jpg" alt="Getting Started with React Hooks" class="blog__img">
+                        <div class="blog__data">
+                            <span class="blog__date">
+                                <i class="fas fa-calendar-alt"></i>
+                                January 15, 2024
+                            </span>
+                            <h3 class="blog__title">
+                                <a href="blog/getting-started-with-react-hooks.html">Getting Started with React Hooks</a>
+                            </h3>
+                            <p class="blog__description">
+                                Learn how to use React Hooks to manage state and side effects in functional components. 
+                                A comprehensive guide for beginners.
+                            </p>
+                            <div class="blog__tags">
+                                <span class="blog__tag">React</span>
+                                <span class="blog__tag">Hooks</span>
+                                <span class="blog__tag">JavaScript</span>
+                            </div>
+                            <a href="blog/getting-started-with-react-hooks.html" class="blog__read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog__post">
+                        <img src="assets/blog2.jpg" alt="CSS Grid vs Flexbox" class="blog__img">
+                        <div class="blog__data">
+                            <span class="blog__date">
+                                <i class="fas fa-calendar-alt"></i>
+                                January 8, 2024
+                            </span>
+                            <h3 class="blog__title">
+                                <a href="blog/css-grid-vs-flexbox.html">CSS Grid vs Flexbox: When to Use Which</a>
+                            </h3>
+                            <p class="blog__description">
+                                Understanding the differences between CSS Grid and Flexbox, and knowing when to use each layout method.
+                            </p>
+                            <div class="blog__tags">
+                                <span class="blog__tag">CSS</span>
+                                <span class="blog__tag">Grid</span>
+                                <span class="blog__tag">Flexbox</span>
+                            </div>
+                            <a href="blog/css-grid-vs-flexbox.html" class="blog__read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog__post">
+                        <img src="assets/blog3.jpg" alt="JavaScript ES6 Features" class="blog__img">
+                        <div class="blog__data">
+                            <span class="blog__date">
+                                <i class="fas fa-calendar-alt"></i>
+                                December 28, 2023
+                            </span>
+                            <h3 class="blog__title">
+                                <a href="blog/javascript-es6-features.html">Essential JavaScript ES6 Features Every Developer Should Know</a>
+                            </h3>
+                            <p class="blog__description">
+                                Explore the most important ES6 features that have transformed JavaScript development and how to use them effectively.
+                            </p>
+                            <div class="blog__tags">
+                                <span class="blog__tag">JavaScript</span>
+                                <span class="blog__tag">ES6</span>
+                                <span class="blog__tag">Features</span>
+                            </div>
+                            <a href="blog/javascript-es6-features.html" class="blog__read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Blog Pagination -->
+                <div class="blog__pagination">
+                    <button class="blog__pagination-btn blog__pagination-prev" disabled>
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <span class="blog__pagination-info">Page 1 of 1</span>
+                    <button class="blog__pagination-btn blog__pagination-next" disabled>
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in touch</span>
+            
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="fas fa-phone contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Call Me</h3>
+                            <span class="contact__subtitle">999-777-666</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__information">
+                        <i class="fas fa-envelope contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__subtitle">user@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__information">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">Spain - Barcelona</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="contact__form grid" id="contact-form">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="contact-name" class="contact__label">Name</label>
+                            <input type="text" id="contact-name" name="name" class="contact__input" required>
+                        </div>
+                        <div class="contact__content">
+                            <label for="contact-email" class="contact__label">Email</label>
+                            <input type="email" id="contact-email" name="email" class="contact__input" required>
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="contact-project" class="contact__label">Project</label>
+                        <input type="text" id="contact-project" name="project" class="contact__input">
+                    </div>
+                    <div class="contact__content">
+                        <label for="contact-message" class="contact__label">Message</label>
+                        <textarea id="contact-message" name="message" cols="0" rows="7" class="contact__input" required></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="button button--primary">
+                            Send Message
+                            <i class="fas fa-paper-plane contact__button-icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Your Name</h1>
+                    <span class="footer__subtitle">Full Stack Developer</span>
+                </div>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#about" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="footer__link">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="footer__socials">
+                    <a href="https://github.com" target="_blank" rel="noopener" class="footer__social">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer__social">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="footer__social">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <p class="footer__copy">&#169; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

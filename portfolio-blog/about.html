@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">Your Name</a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="./index.html">Home</a></li>
+          <li><a class="nav-link active" href="./about.html">About</a></li>
+          <li><a class="nav-link" href="./projects.html">Projects</a></li>
+          <li><a class="nav-link" href="./blog.html">Blog</a></li>
+          <li><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section hero hero-compact reveal">
+      <div class="container">
+        <h1>About Me</h1>
+        <p class="subtitle">Developer. Designer. Lifelong learner.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container two-col">
+        <div>
+          <h2>Hi, I'm Your Name</h2>
+          <p>I love building delightful user experiences with clean, accessible markup, modern CSS, and JavaScript. I focus on performance and thoughtful design.</p>
+          <p>Outside of coding, I enjoy reading, running, and exploring coffee shops.</p>
+        </div>
+        <aside class="card">
+          <div class="card-body">
+            <h3>Skills</h3>
+            <ul class="skills">
+              <li>HTML5, Semantic Markup</li>
+              <li>CSS3, Flexbox, Grid</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Accessibility (a11y)</li>
+              <li>Git & GitHub</li>
+              <li>React / Next.js (basics)</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt reveal">
+      <div class="container">
+        <h2>Journey</h2>
+        <ol class="timeline">
+          <li>
+            <div class="timeline-content">
+              <time>2025</time>
+              <h3>Freelance Web Developer</h3>
+              <p>Helping clients ship fast, responsive websites.</p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <time>2024</time>
+              <h3>Front-End Learning Sprint</h3>
+              <p>Dove into modern CSS and JS. Built several projects.</p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <time>2023</time>
+              <h3>Started Coding Journey</h3>
+              <p>Learned the basics and fell in love with the web.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">🐙</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello World: Starting My Web Dev Journey",
+    "date": "2025-01-10",
+    "tags": ["intro", "learning"],
+    "excerpt": "Kicking off my blog with thoughts on learning web development and building projects."
+  },
+  {
+    "slug": "css-layout-tips",
+    "title": "5 Practical CSS Layout Tips",
+    "date": "2025-01-20",
+    "tags": ["css", "layout", "tips"],
+    "excerpt": "A handful of small, useful CSS techniques for real-world layouts."
+  }
+]

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">Your Name</a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="./index.html">Home</a></li>
+          <li><a class="nav-link" href="./about.html">About</a></li>
+          <li><a class="nav-link active" href="./projects.html">Projects</a></li>
+          <li><a class="nav-link" href="./blog.html">Blog</a></li>
+          <li><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section hero hero-compact reveal">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="subtitle">A selection of things I've built.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="cards-grid" id="projectsGrid">
+          <!-- Example projects; replace with your data or fetch dynamically -->
+          <article class="card">
+            <img src="https://picsum.photos/seed/projA/600/360" alt="Project A" />
+            <div class="card-body">
+              <h3>Project A</h3>
+              <p>Short description of Project A.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm btn-outline" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/projB/600/360" alt="Project B" />
+            <div class="card-body">
+              <h3>Project B</h3>
+              <p>Short description of Project B.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm btn-outline" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/projC/600/360" alt="Project C" />
+            <div class="card-body">
+              <h3>Project C</h3>
+              <p>Short description of Project C.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm btn-outline" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/projD/600/360" alt="Project D" />
+            <div class="card-body">
+              <h3>Project D</h3>
+              <p>Short description of Project D.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm btn-outline" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="pagination center mt-lg" id="projectsPagination" aria-label="Projects pagination">
+          <!-- Optional: client-side pagination hooks -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">🐙</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

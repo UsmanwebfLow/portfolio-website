@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with React Hooks - Your Name Blog</title>
+    <meta name="description" content="Learn how to use React Hooks to manage state and side effects in functional components. A comprehensive guide for beginners.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .blog-post__header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-post__title {
+            font-size: 2.5rem;
+            color: var(--title-color);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .blog-post__meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            color: var(--text-color-light);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-post__date,
+        .blog-post__author {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .blog-post__tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-post__tag {
+            background-color: var(--first-color-lighter);
+            color: var(--first-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: var(--small-font-size);
+            font-weight: var(--font-medium);
+        }
+        
+        .blog-post__featured-image {
+            width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .blog-post__content {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        
+        .blog-post__content h2 {
+            color: var(--title-color);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+        
+        .blog-post__content h3 {
+            color: var(--title-color);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.25rem;
+        }
+        
+        .blog-post__content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-post__content ul,
+        .blog-post__content ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+        
+        .blog-post__content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-post__content blockquote {
+            border-left: 4px solid var(--first-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            background-color: var(--first-color-lighter);
+            padding: 1rem 1rem 1rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        
+        .blog-post__content pre {
+            background-color: #2d3748;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .blog-post__content code {
+            background-color: var(--input-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .blog-post__content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .blog-post__navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--first-color-lighter);
+        }
+        
+        .blog-post__nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--first-color);
+            font-weight: var(--font-medium);
+            transition: var(--transition-fast);
+        }
+        
+        .blog-post__nav-link:hover {
+            color: var(--first-color-alt);
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--first-color);
+            font-weight: var(--font-medium);
+            margin-bottom: 2rem;
+            transition: var(--transition-fast);
+        }
+        
+        .back-to-blog:hover {
+            color: var(--first-color-alt);
+            transform: translateX(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <span class="nav__logo-name">YourName</span>
+            </a>
+            
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="blog-post">
+            <a href="../index.html#blog" class="back-to-blog">
+                <i class="fas fa-arrow-left"></i>
+                Back to Blog
+            </a>
+            
+            <header class="blog-post__header">
+                <h1 class="blog-post__title">Getting Started with React Hooks</h1>
+                
+                <div class="blog-post__meta">
+                    <div class="blog-post__date">
+                        <i class="fas fa-calendar-alt"></i>
+                        January 15, 2024
+                    </div>
+                    <div class="blog-post__author">
+                        <i class="fas fa-user"></i>
+                        Your Name
+                    </div>
+                </div>
+                
+                <div class="blog-post__tags">
+                    <span class="blog-post__tag">React</span>
+                    <span class="blog-post__tag">Hooks</span>
+                    <span class="blog-post__tag">JavaScript</span>
+                    <span class="blog-post__tag">Frontend</span>
+                </div>
+            </header>
+            
+            <img src="../assets/blog1.jpg" alt="React Hooks illustration" class="blog-post__featured-image">
+            
+            <article class="blog-post__content">
+                <p>React Hooks revolutionized the way we write React components by allowing us to use state and other React features in functional components. In this comprehensive guide, we'll explore the most important hooks and learn how to use them effectively.</p>
+                
+                <h2>What are React Hooks?</h2>
+                
+                <p>Hooks are functions that let you "hook into" React state and lifecycle features from function components. They don't work inside classes — they let you use React without classes.</p>
+                
+                <blockquote>
+                    "Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class." - React Documentation
+                </blockquote>
+                
+                <h2>The useState Hook</h2>
+                
+                <p>The <code>useState</code> hook is the most basic and commonly used hook. It allows you to add state to functional components.</p>
+                
+                <h3>Basic Usage</h3>
+                
+                <pre><code class="language-javascript">import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                
+                <p>In this example:</p>
+                <ul>
+                    <li><code>useState(0)</code> declares a state variable with an initial value of 0</li>
+                    <li>It returns an array with two elements: the current state value and a setter function</li>
+                    <li>We use array destructuring to name these variables <code>count</code> and <code>setCount</code></li>
+                </ul>
+                
+                <h2>The useEffect Hook</h2>
+                
+                <p>The <code>useEffect</code> hook lets you perform side effects in function components. It serves the same purpose as <code>componentDidMount</code>, <code>componentDidUpdate</code>, and <code>componentWillUnmount</code> combined in React classes.</p>
+                
+                <h3>Basic Side Effects</h3>
+                
+                <pre><code class="language-javascript">import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() =&gt; {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                
+                <h3>Effects with Cleanup</h3>
+                
+                <p>Some effects require cleanup to prevent memory leaks. You can return a function from your effect that will be called when the component unmounts or before the effect runs again.</p>
+                
+                <pre><code class="language-javascript">useEffect(() =&gt; {
+  const timer = setInterval(() =&gt; {
+    console.log('Timer tick');
+  }, 1000);
+
+  // Cleanup function
+  return () =&gt; {
+    clearInterval(timer);
+  };
+}, []); // Empty dependency array means this effect runs once</code></pre>
+                
+                <h2>Dependency Arrays</h2>
+                
+                <p>The second argument to <code>useEffect</code> is a dependency array that tells React when to re-run the effect:</p>
+                
+                <ul>
+                    <li><strong>No dependency array:</strong> Effect runs after every render</li>
+                    <li><strong>Empty array <code>[]</code>:</strong> Effect runs only once after initial render</li>
+                    <li><strong>Array with dependencies:</strong> Effect runs when any dependency changes</li>
+                </ul>
+                
+                <pre><code class="language-javascript">// Run effect when 'count' changes
+useEffect(() =&gt; {
+  document.title = `Count: ${count}`;
+}, [count]);
+
+// Run effect when 'name' OR 'email' changes
+useEffect(() =&gt; {
+  saveUserData(name, email);
+}, [name, email]);</code></pre>
+                
+                <h2>Best Practices</h2>
+                
+                <h3>1. Keep Effects Focused</h3>
+                <p>Each effect should have a single responsibility. If you need multiple effects, use multiple <code>useEffect</code> calls.</p>
+                
+                <h3>2. Always Include Dependencies</h3>
+                <p>Include all variables from component scope that are used inside the effect in the dependencies array to avoid bugs.</p>
+                
+                <h3>3. Use Custom Hooks for Reusable Logic</h3>
+                <p>Extract complex stateful logic into custom hooks to make it reusable across components.</p>
+                
+                <pre><code class="language-javascript">// Custom hook for fetching data
+function useUserData(userId) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    async function fetchUser() {
+      setLoading(true);
+      try {
+        const response = await fetch(`/api/users/${userId}`);
+        const userData = await response.json();
+        setUser(userData);
+      } catch (error) {
+        console.error('Failed to fetch user:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchUser();
+  }, [userId]);
+
+  return { user, loading };
+}</code></pre>
+                
+                <h2>Conclusion</h2>
+                
+                <p>React Hooks provide a powerful way to add state and lifecycle behavior to functional components. They make your code more reusable, testable, and easier to understand. Start with <code>useState</code> and <code>useEffect</code>, and gradually explore other hooks like <code>useContext</code>, <code>useReducer</code>, and <code>useMemo</code> as your applications grow in complexity.</p>
+                
+                <p>Remember to follow the Rules of Hooks:</p>
+                <ul>
+                    <li>Only call hooks at the top level of your function</li>
+                    <li>Only call hooks from React function components or custom hooks</li>
+                </ul>
+                
+                <p>Happy coding with React Hooks! 🚀</p>
+            </article>
+            
+            <nav class="blog-post__navigation">
+                <a href="#" class="blog-post__nav-link">
+                    <i class="fas fa-chevron-left"></i>
+                    Previous Post
+                </a>
+                <a href="#" class="blog-post__nav-link">
+                    Next Post
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Your Name</h1>
+                    <span class="footer__subtitle">Full Stack Developer</span>
+                </div>
+                
+                <ul class="footer__links">
+                    <li><a href="../index.html#about" class="footer__link">About</a></li>
+                    <li><a href="../index.html#projects" class="footer__link">Projects</a></li>
+                    <li><a href="../index.html#blog" class="footer__link">Blog</a></li>
+                    <li><a href="../index.html#contact" class="footer__link">Contact</a></li>
+                </ul>
+                
+                <div class="footer__socials">
+                    <a href="https://github.com" target="_blank" rel="noopener" class="footer__social">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer__social">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="footer__social">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <p class="footer__copy">&#169; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

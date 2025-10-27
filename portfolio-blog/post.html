@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post – Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">Your Name</a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="./index.html">Home</a></li>
+          <li><a class="nav-link" href="./about.html">About</a></li>
+          <li><a class="nav-link" href="./projects.html">Projects</a></li>
+          <li><a class="nav-link active" href="./blog.html">Blog</a></li>
+          <li><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="section reveal">
+      <div class="container">
+        <header class="post-header">
+          <a class="btn btn-sm" href="./blog.html">← Back to blog</a>
+          <h1 id="postTitle">Loading...</h1>
+          <p class="post-meta"><time id="postDate"></time> · <span id="postReadingTime"></span></p>
+          <div id="postTags" class="post-tags"></div>
+        </header>
+        <div id="postContent" class="post-content">
+          <p>Loading post...</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">🐙</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/blog.js"></script>
+</body>
+</html>

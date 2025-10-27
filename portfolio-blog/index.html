@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name – Web Developer</title>
+  <meta name="description" content="Portfolio and blog of Your Name – Web Developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">Your Name</a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a class="nav-link active" href="./index.html">Home</a></li>
+          <li><a class="nav-link" href="./about.html">About</a></li>
+          <li><a class="nav-link" href="./projects.html">Projects</a></li>
+          <li><a class="nav-link" href="./blog.html">Blog</a></li>
+          <li><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero reveal" id="home">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Hi, I'm <span class="accent">Your Name</span></h1>
+          <p class="subtitle">Web Developer crafting clean, fast, and accessible experiences for the web.</p>
+          <div class="hero-cta">
+            <a href="./projects.html" class="btn btn-primary">See My Work</a>
+            <a href="./contact.html" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="blob"></div>
+          <img src="https://picsum.photos/seed/portfolio-hero/520/360" alt="Decorative" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">What I Do</h2>
+        <div class="features-grid">
+          <article class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Frontend Engineering</h3>
+            <p>Building interactive, responsive UIs with HTML, CSS, and JavaScript.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Designs that look great on mobile, tablet, and desktop.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">🚀</div>
+            <h3>Performance & Accessibility</h3>
+            <p>Fast load times and inclusive, accessible experiences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt reveal">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/proj1/600/360" alt="Project 1 preview" />
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p>A short description of this awesome project. Built with HTML, CSS, JS.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm btn-outline" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/proj2/600/360" alt="Project 2 preview" />
+            <div class="card-body">
+              <h3>Project Two</h3>
+              <p>Another cool project that solves real problems. Built with modern web tech.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm btn-outline" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/proj3/600/360" alt="Project 3 preview" />
+            <div class="card-body">
+              <h3>Project Three</h3>
+              <p>A helpful tool or utility. Clean UI and easy to use.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm btn-outline" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="center mt-lg">
+          <a class="btn" href="./projects.html">See all projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Latest from the Blog</h2>
+        <div class="blog-teasers" id="homeBlogTeasers">
+          <!-- populated by JS from posts.json -->
+        </div>
+        <div class="center mt-lg">
+          <a class="btn" href="./blog.html">Read the blog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">🐙</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/blog.js"></script>
+</body>
+</html>

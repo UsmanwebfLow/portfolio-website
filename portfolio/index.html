@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | Your Name</title>
+  <meta name="description" content="Portfolio and blog of Your Name" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/theme.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo">YourName</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section reveal">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi, I'm Your Name</h1>
+          <p class="subtitle">Frontend Developer • UI Engineer • Web Enthusiast</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="/projects.html">See My Work</a>
+            <a class="btn btn-secondary" href="/about.html">About Me</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <a class="link" href="/projects.html">View all</a>
+        </div>
+        <div class="grid cards" id="home-projects">
+          <!-- Filled by JS or keep simple static examples -->
+          <article class="card">
+            <img src="/assets/images/placeholder-1.svg" alt="Project screenshot" />
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p>Short description about the project and technologies used.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="/assets/images/placeholder-2.svg" alt="Project screenshot" />
+            <div class="card-body">
+              <h3>Project Two</h3>
+              <p>Short description about the project and technologies used.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="/assets/images/placeholder-3.svg" alt="Project screenshot" />
+            <div class="card-body">
+              <h3>Project Three</h3>
+              <p>Short description about the project and technologies used.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#">Live</a>
+                <a class="btn btn-sm" href="#">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Latest Articles</h2>
+          <a class="link" href="/blog/index.html">Read the blog</a>
+        </div>
+        <div class="grid cards" id="home-blog">
+          <!-- populated by JS from JSON index -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="/assets/js/blog.js"></script>
+  <script>
+    // Populate year and latest posts on home
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

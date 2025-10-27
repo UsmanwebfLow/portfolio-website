@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "slug": "welcome-to-my-blog",
+      "title": "Welcome to My Blog",
+      "date": "2025-01-10",
+      "tags": ["announcement", "personal"],
+      "excerpt": "Kicking off my blog with thoughts on learning, building, and sharing.",
+      "coverImage": "/assets/images/placeholder-1.jpg"
+    },
+    {
+      "slug": "building-a-portfolio-site",
+      "title": "Building a Portfolio Site",
+      "date": "2025-01-05",
+      "tags": ["web", "frontend"],
+      "excerpt": "How I approached designing and implementing a minimalist portfolio.",
+      "coverImage": "/assets/images/placeholder-2.jpg"
+    }
+  ]
+}
